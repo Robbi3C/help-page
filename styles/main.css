@@ -168,56 +168,6 @@ section { margin-top: 88px; scroll-margin-top: 72px; }
 .intro { scroll-margin-top: 72px; }
 
 /* ============================================================
-   TL;DR card
-   ============================================================ */
-.tldr {
-  margin: 0 0 36px;
-  padding: 22px 24px 20px;
-  border: 1px solid rgba(184, 125, 110, 0.28);
-  border-radius: var(--radius-premium);
-  background:
-    linear-gradient(180deg, rgba(184, 125, 110, 0.08), rgba(184, 125, 110, 0.03));
-  position: relative;
-}
-
-.tldr-label {
-  display: inline-block;
-  font-family: var(--font-sans);
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.32em;
-  text-transform: uppercase;
-  color: var(--accent-clay);
-  margin-bottom: 12px;
-}
-
-.tldr ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.tldr li {
-  position: relative;
-  padding-left: 22px;
-  font-family: var(--font-sans);
-  font-size: 16px;
-  line-height: 1.5;
-  color: var(--text-on-dark);
-}
-
-.tldr li::before {
-  content: "→";
-  position: absolute;
-  left: 0;
-  top: 0;
-  color: var(--accent-clay);
-  font-family: var(--font-serif);
-  font-size: 16px;
-}
-
-/* ============================================================
    Pills & labels
    ============================================================ */
 .important-pill {
@@ -656,9 +606,6 @@ details.script .script-body strong {
   section { scroll-margin-top: 64px; }
   .intro { scroll-margin-top: 64px; }
 
-  .tldr { padding: 18px 18px 16px; margin-bottom: 32px; border-radius: 14px; }
-  .tldr-label { font-size: 9.5px; margin-bottom: 10px; }
-  .tldr li { font-size: 15.5px; padding-left: 20px; }
 
   h1 { margin-bottom: 24px; }
   section { margin-top: 56px; }
