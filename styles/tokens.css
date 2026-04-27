@@ -1,0 +1,56 @@
+:root {
+  /* Fonts */
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "DM Sans", sans-serif;
+  --font-handwriting: "Caveat", cursive;
+
+  /* Surfaces */
+  --surface-primary: #fcfaf7;
+  --surface-warm: #f4f1ee;
+  --surface-stone: #e8e2da;
+
+  /* Navy stack */
+  --navy-deep: #1a1b23;
+  --navy-primary: #272b3d;
+  --navy-mid: #363b52;
+  --navy-wash: #c7c9d4;
+
+  /* Text */
+  --text-primary: #1a1a1a;
+  --text-secondary: #545454;
+  --text-on-dark: #faf8f5;
+
+  /* Accents */
+  --accent-clay: #b87d6e;
+  --accent-clay-dark: #9a6455;
+  --accent-blush: #d4ada6;
+
+  /* Borders */
+  --divider: #e5e1db;
+
+  /* Radii */
+  --radius-premium: 16px;
+  --radius-sharp: 2px;
+
+  /* Layout */
+  --max-block: 85rem; /* 1440px */
+
+  /* Type scale */
+  --fs-body-sm: 16px;
+  --fs-body: 18px;
+  --fs-body-lead: 20px;
+  --fs-h3: 24px;
+  --fs-h2: 36px;
+  --fs-h1: 60px;
+  --fs-h1-fluid: clamp(2.4rem, 9.5vw, 4rem);
+  --fs-h2-fluid: clamp(1.875rem, 1.25rem + 3vw, 3.5rem);
+  --fs-eyebrow: 10px;
+  --fs-button: 11px;
+
+  /* Gradients */
+  --gradient-blush-stone: linear-gradient(135deg, #e8dcd6, #dccac0, #d0beb8);
+  --gradient-warm-sand: linear-gradient(135deg, #e6ded6, #d6c8bc, #c8bab0);
+  --gradient-dark-glow: linear-gradient(135deg, #1a1b23, #262838, #1a1b23);
+  --gradient-dark-warm: linear-gradient(135deg, #2a2226, #332a30, #2a2226);
+  --gradient-stone-fade: linear-gradient(135deg, #e8e2da, #f4f1ee, #fcfaf7);
+}
