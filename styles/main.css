@@ -59,6 +59,55 @@ main {
 }
 
 /* ============================================================
+   Sticky quick-nav (page sections)
+   ============================================================ */
+.quicknav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(13, 14, 22, 0.72);
+  -webkit-backdrop-filter: saturate(140%) blur(14px);
+  backdrop-filter: saturate(140%) blur(14px);
+  border-bottom: 1px solid rgba(199, 201, 212, 0.10);
+}
+
+.quicknav ol {
+  list-style: none;
+  display: flex;
+  gap: 4px;
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 10px 16px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+.quicknav ol::-webkit-scrollbar { display: none; }
+
+.quicknav li { flex: 0 0 auto; }
+
+.quicknav a {
+  display: inline-flex;
+  align-items: center;
+  height: 32px;
+  padding: 0 12px;
+  border: 1px solid rgba(199, 201, 212, 0.14);
+  border-radius: 999px;
+  font-family: var(--font-sans);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: var(--text-on-dark);
+  background: transparent;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: border-color 0.18s ease, color 0.18s ease, background 0.18s ease;
+}
+.quicknav a:hover {
+  border-color: var(--accent-clay);
+  color: var(--accent-clay);
+}
+
+/* ============================================================
    Typography — headings
    ============================================================ */
 h1, h2 {
@@ -115,7 +164,58 @@ a {
 }
 a:hover { border-bottom-color: var(--accent-clay); }
 
-section { margin-top: 88px; }
+section { margin-top: 88px; scroll-margin-top: 72px; }
+.intro { scroll-margin-top: 72px; }
+
+/* ============================================================
+   TL;DR card
+   ============================================================ */
+.tldr {
+  margin: 0 0 36px;
+  padding: 22px 24px 20px;
+  border: 1px solid rgba(184, 125, 110, 0.28);
+  border-radius: var(--radius-premium);
+  background:
+    linear-gradient(180deg, rgba(184, 125, 110, 0.08), rgba(184, 125, 110, 0.03));
+  position: relative;
+}
+
+.tldr-label {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--accent-clay);
+  margin-bottom: 12px;
+}
+
+.tldr ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tldr li {
+  position: relative;
+  padding-left: 22px;
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text-on-dark);
+}
+
+.tldr li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--accent-clay);
+  font-family: var(--font-serif);
+  font-size: 16px;
+}
 
 /* ============================================================
    Pills & labels
@@ -332,7 +432,7 @@ ul.recommendation-quotes li::before {
 .carousel-dots { display: none; }
 
 /* ============================================================
-   Theme list (numbered editorial style)
+   Theme list (numbered editorial style, collapsible)
    ============================================================ */
 ol.themes {
   list-style: none;
@@ -342,38 +442,76 @@ ol.themes {
 
 ol.themes > li {
   counter-increment: theme-count;
-  padding: 26px 0;
-  border-top: 1px solid rgba(199, 201, 212, 0.12);
+  border-top: 1px solid rgba(199, 201, 212, 0.14);
   display: grid;
-  grid-template-columns: 48px 1fr;
+  grid-template-columns: 56px 1fr;
   gap: 20px;
   align-items: start;
 }
 
 ol.themes > li:last-child {
-  border-bottom: 1px solid rgba(199, 201, 212, 0.12);
+  border-bottom: 1px solid rgba(199, 201, 212, 0.14);
 }
 
 ol.themes > li::before {
   content: counter(theme-count, decimal-leading-zero);
   font-family: var(--font-serif);
   font-style: italic;
-  font-size: 16px;
+  font-size: 26px;
   color: var(--accent-clay);
   font-weight: 500;
   line-height: 1;
-  padding-top: 6px;
-  letter-spacing: 0.04em;
-  opacity: 0.9;
+  padding-top: 22px;
+  letter-spacing: 0.02em;
 }
+
+details.theme {
+  width: 100%;
+}
+
+details.theme summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 22px 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+details.theme summary::-webkit-details-marker { display: none; }
+
+details.theme summary::after {
+  content: "+";
+  font-family: var(--font-serif);
+  font-size: 26px;
+  color: var(--accent-clay);
+  line-height: 1;
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+}
+
+details.theme[open] summary::after { content: "−"; }
 
 .theme-title {
   font-family: var(--font-sans);
   font-weight: 500;
   color: var(--text-on-dark);
-  margin-bottom: 14px;
   font-size: 17px;
   line-height: 1.4;
+  transition: color 0.2s ease;
+}
+
+details.theme summary:hover .theme-title,
+details.theme[open] .theme-title { color: var(--accent-clay); }
+
+details.theme[open] {
+  padding-bottom: 22px;
+}
+
+details.theme ul.theme-examples {
+  margin-top: 4px;
 }
 
 ul.theme-examples {
@@ -510,7 +648,17 @@ details.script .script-body strong {
    ============================================================ */
 @media (max-width: 600px) {
   body { font-size: 16px; }
-  main { padding: 48px 20px 80px; }
+  main { padding: 28px 20px 80px; }
+
+  .quicknav ol { padding: 8px 14px; gap: 6px; }
+  .quicknav a { height: 30px; padding: 0 11px; font-size: 11.5px; }
+
+  section { scroll-margin-top: 64px; }
+  .intro { scroll-margin-top: 64px; }
+
+  .tldr { padding: 18px 18px 16px; margin-bottom: 32px; border-radius: 14px; }
+  .tldr-label { font-size: 9.5px; margin-bottom: 10px; }
+  .tldr li { font-size: 15.5px; padding-left: 20px; }
 
   h1 { margin-bottom: 24px; }
   section { margin-top: 56px; }
@@ -608,12 +756,14 @@ details.script .script-body strong {
 
   ol.themes { margin-top: 24px; }
   ol.themes > li {
-    padding: 22px 0;
-    grid-template-columns: 32px 1fr;
+    grid-template-columns: 38px 1fr;
     gap: 12px;
   }
-  ol.themes > li::before { font-size: 17px; padding-top: 3px; }
-  .theme-title { font-size: 16px; margin-bottom: 10px; }
+  ol.themes > li::before { font-size: 22px; padding-top: 18px; }
+  details.theme summary { padding: 18px 0; }
+  details.theme summary::after { font-size: 24px; }
+  details.theme[open] { padding-bottom: 18px; }
+  .theme-title { font-size: 16px; }
   ul.theme-examples li {
     font-size: 16px;
     line-height: 1.5;

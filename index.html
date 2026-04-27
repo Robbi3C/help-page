@@ -16,11 +16,31 @@
   <link rel="stylesheet" href="styles/main.css" />
 </head>
 <body>
+  <nav class="quicknav" aria-label="Page sections">
+    <ol>
+      <li><a href="#ask">1 Ask</a></li>
+      <li><a href="#hopes">2 Hopes</a></li>
+      <li><a href="#one-thing">3 The One Thing</a></li>
+      <li><a href="#examples">4 Examples</a></li>
+      <li><a href="#themes">5 Themes</a></li>
+    </ol>
+  </nav>
+
   <main>
 
-    <header class="intro">
+    <header class="intro" id="ask">
       <h1>Thank you for <em>helping</em>!</h1>
       <p class="subtitle">(it means a LOT)</p>
+
+      <aside class="tldr" aria-label="The ask in 30 seconds">
+        <span class="tldr-label">The ask in 30 seconds</span>
+        <ul>
+          <li>Sign up to Love Retold &amp; record one memory</li>
+          <li>Click around the app a bit</li>
+          <li>Record me a short video about it (~5 min)</li>
+          <li>In the video: include a clear recommendation</li>
+        </ul>
+      </aside>
 
       <p>I'll be upfront, this is likely to take 30 – 45 minutes and will feel like a bit of a pain in the butt to do. I want you to know that up front, and that I really appreciate you spending your precious time to help me.</p>
 
@@ -42,7 +62,7 @@
       <script src="https://player.vimeo.com/api/player.js"></script>
     </header>
 
-    <section>
+    <section id="hopes">
       <h2>What I'm hoping for</h2>
       <p>Real authentic you is way better than staged, scripted you. I want it to feel natural. Some practical things that will help:</p>
       <ul class="tips">
@@ -54,7 +74,7 @@
       </ul>
     </section>
 
-    <section class="important-callout">
+    <section class="important-callout" id="one-thing">
       <span class="important-pill">The one ask</span>
       <h2>One thing I really need: <em>a clear recommendation.</em></h2>
       <p>The bit I most need from you, somewhere in your video, is some kind of clear recommendation. The kind of thing you'd say to a friend who was thinking about ordering one.</p>
@@ -66,7 +86,7 @@
       </ul>
     </section>
 
-    <section>
+    <section id="examples">
       <h2>A few examples to give you the feel</h2>
       <p class="muted">These are from another brand doing roughly the same kind of thing. Have a quick watch of one or two, gives you a feel of what I'm aiming for. Don't try to match them, just get the vibe.</p>
       <div class="video-carousel">
@@ -107,104 +127,104 @@
       </div>
     </section>
 
-    <section>
+    <section id="themes">
       <h2>Themes you could touch on</h2>
-      <p class="muted">Pick two or three that feel true for you, skip the rest. You don't need to cover all of them. The example sentences underneath each one are just here to give you a feel of what someone might say.</p>
+      <p class="muted">Pick two or three that feel true for you, skip the rest. Tap any theme to see example sentences someone might say — they're just there to give you a feel.</p>
       <ol class="themes">
         <li>
-          <div>
-            <div class="theme-title">The experience of actually recording</div>
+          <details class="theme">
+            <summary><span class="theme-title">The experience of actually recording</span></summary>
             <ul class="theme-examples">
               <li>"I was so nervous I'd be self-conscious and not know what to say, but honestly it was so easy once I got going."</li>
               <li>"Most of my stories only took like 5 minutes to record, it was so quick but I love how they came out."</li>
               <li>"The questions really do help get you started, you just kind of go with them."</li>
             </ul>
-          </div>
+          </details>
         </li>
         <li>
-          <div>
-            <div class="theme-title">The prompts</div>
+          <details class="theme">
+            <summary><span class="theme-title">The prompts</span></summary>
             <ul class="theme-examples">
               <li>"The prompts are a great place to start when you don't know what to ask."</li>
               <li>"We actually wrote our own questions too for a couple of stories I really wanted to get in there."</li>
               <li>"I loved that I could send the questions to other people, it was so fun hearing my mum talk about me talking about Dan for the first time."</li>
             </ul>
-          </div>
+          </details>
         </li>
         <li>
-          <div>
-            <div class="theme-title">Pace and people showing up</div>
+          <details class="theme">
+            <summary><span class="theme-title">Pace and people showing up</span></summary>
             <ul class="theme-examples">
               <li>"We did most of the recording after the wedding but it was really nice to do it while everything was so fresh in our minds."</li>
               <li>"I thought we'd have to chase everyone but it was actually super easy. The people we really wanted stories from did such an amazing job, and it's so fun when they come in and you play it back for the first time."</li>
             </ul>
-          </div>
+          </details>
         </li>
         <li>
-          <div>
-            <div class="theme-title">The stories in the book: your own origin story, and voices you didn't expect to get</div>
+          <details class="theme">
+            <summary><span class="theme-title">The stories in the book: your own origin story, and voices you didn't expect to get</span></summary>
             <ul class="theme-examples">
               <li>"Obviously most of the book is our wedding photos and the speeches, but I loved that we could include some of our origin story too, like our first date and the proposal. It makes the whole thing feel a lot more complete, and I think it'll be even more special for our kids when they play it back one day."</li>
               <li>"I even got my dad to tell a story and he normally can't be bothered to do anything [laughs]. It's not a long one but I love that I've got his voice as part of our wedding story."</li>
             </ul>
-          </div>
+          </details>
         </li>
         <li>
-          <div>
-            <div class="theme-title">Being able to play the speeches and vows again</div>
+          <details class="theme">
+            <summary><span class="theme-title">Being able to play the speeches and vows again</span></summary>
             <ul class="theme-examples">
               <li>"I am SO glad we captured the best man's speech, I'd forgotten half of what he said, and it really took us right back to the wedding day hearing him say it all again."</li>
               <li>"I don't remember everything my husband said in his vows, but I have them now, in his voice."</li>
               <li>"Being able to actually play them back is something else."</li>
             </ul>
-          </div>
+          </details>
         </li>
         <li>
-          <div>
-            <div class="theme-title">The written stories still sound like you</div>
+          <details class="theme">
+            <summary><span class="theme-title">The written stories still sound like you</span></summary>
             <ul class="theme-examples">
               <li>"It sounds like me, but cleaned up. Put in a slightly more sensible order and made a bit more of a story, but I love that it still sounds exactly like me and kept the inside jokes in."</li>
               <li>"I was worried it would come back sounding generic but it really didn't."</li>
             </ul>
-          </div>
+          </details>
         </li>
         <li>
-          <div>
-            <div class="theme-title">The book itself</div>
+          <details class="theme">
+            <summary><span class="theme-title">The book itself</span></summary>
             <ul class="theme-examples">
               <li>"It's such a beautiful book, seriously. Big, heavy, really well made, not some cheap photo book at all."</li>
               <li>"I've seen a few wedding albums before and this one really stands out. The paper's lovely, the cover's gorgeous."</li>
               <li>"We keep it out on the coffee table and everyone picks it up when they come over."</li>
             </ul>
-          </div>
+          </details>
         </li>
         <li>
-          <div>
-            <div class="theme-title">Hearing the voices through the QR code</div>
+          <details class="theme">
+            <summary><span class="theme-title">Hearing the voices through the QR code</span></summary>
             <ul class="theme-examples">
               <li>"It's so so special being able to scan a page and hear the story again, especially the vows and the speeches. Honestly it just makes the whole book feel so much more complete."</li>
             </ul>
-          </div>
+          </details>
         </li>
         <li>
-          <div>
-            <div class="theme-title">Something to pass down</div>
+          <details class="theme">
+            <summary><span class="theme-title">Something to pass down</span></summary>
             <ul class="theme-examples">
               <li>"I love that I've got my mum's voice captured in there, I'll always have that, and it just makes the book even more special."</li>
               <li>"Having something to pass down to our kids one day is really special. I wish I'd had something like this from my own parents."</li>
             </ul>
-          </div>
+          </details>
         </li>
         <li>
-          <div>
-            <div class="theme-title">If you'd recommend it</div>
+          <details class="theme">
+            <summary><span class="theme-title">If you'd recommend it</span></summary>
             <ul class="theme-examples">
               <li>"Honestly, I've been telling everyone about it."</li>
               <li>"All my married friends wish they'd had something like this."</li>
               <li>"I'm so glad we got this for our wedding, wouldn't change a thing."</li>
               <li>"If you're getting married, you should seriously consider it."</li>
             </ul>
-          </div>
+          </details>
         </li>
       </ol>
     </section>
