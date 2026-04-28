@@ -356,6 +356,31 @@ ul.recommendation-quotes li::before {
   opacity: 0.85;
 }
 
+.fullscreen-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 12px 0 0;
+  padding: 8px 14px;
+  font: inherit;
+  font-size: 14px;
+  color: var(--navy-primary, #1a2a3a);
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.fullscreen-btn:hover,
+.fullscreen-btn:focus-visible {
+  background: #fff;
+  transform: translateY(-1px);
+  outline: none;
+}
+
+.fullscreen-btn svg { display: block; }
+
 /* Carousel wrapper */
 .video-carousel {
   position: relative;

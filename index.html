@@ -47,9 +47,29 @@
       <p>To help orient you and walk you through everything, I've recorded a video below.</p>
 
       <div class="video-frame">
-        <iframe src="https://player.vimeo.com/video/1186944999?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen title="Video Project 7"></iframe>
+        <iframe id="introVideo" src="https://player.vimeo.com/video/1187194277?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen title="Video Project 7"></iframe>
       </div>
+      <button type="button" class="fullscreen-btn" id="introFullscreenBtn" aria-label="View video fullscreen">
+        <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false">
+          <path fill="currentColor" d="M4 4h6v2H6v4H4V4zm10 0h6v6h-2V6h-4V4zM4 14h2v4h4v2H4v-6zm14 0h2v6h-6v-2h4v-4z"/>
+        </svg>
+        View fullscreen
+      </button>
       <script src="https://player.vimeo.com/api/player.js"></script>
+      <script>
+        (function () {
+          var iframe = document.getElementById('introVideo');
+          var btn = document.getElementById('introFullscreenBtn');
+          if (!iframe || !btn || typeof Vimeo === 'undefined') return;
+          var player = new Vimeo.Player(iframe);
+          btn.addEventListener('click', function () {
+            player.requestFullscreen().catch(function () {
+              if (iframe.requestFullscreen) iframe.requestFullscreen();
+              else if (iframe.webkitRequestFullscreen) iframe.webkitRequestFullscreen();
+            });
+          });
+        })();
+      </script>
     </header>
 
     <section id="hopes">
